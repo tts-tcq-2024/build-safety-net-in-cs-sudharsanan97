@@ -1,0 +1,11 @@
+Test Case ,Description,Input,Expected Output
+GenerateSoundex_EmptyString_ReturnsEmptyString,Verify that the expected output for an empty input should be an empty string,""""" (an empty string)"," """" (an empty string)"
+GenerateSoundex_SingleCharacter_ReturnsPaddedCode,Verify that the expected output for an SingleCharacter input should be a padded string,"""A""","""A000"""
+GenerateSoundex_ValidName_ReturnsCorrectSoundex,Verify that the expected output for string with mixed characters returns a soundex code,"""Abcd""","""A123"""
+GenerateSoundex_LongString_ReturnsTruncated,Verify that the expected output for too long string returns truncated soundex code,"""Manufacturing"" ","""M532"""
+GenerateSoundex_NumbersInString_ReturnsCorrectSoundex,Verify that the output for string with numbers returns soundex code that ignores numbers,"""Abcd986""","""A123"""
+GenerateSoundex_TwoSimilarletters,verify that the output for string with two similar letters returns soundexcode that ignores repetition,"""Coffee""","""C100"""
+GenerateSoundex_NumbersAsFirstLetter,verify that the output for string beginning with numbers return a valid soundexcode ,"""6plan""","""6146"""
+GenerateSoundex_WordsWithSpace,verify that the output for string with space returns soundex code that ignores space,"""AB CD""","""A430"""
+GenerateSoundex_WithSpecialCharacters,verify that the output for string with special returns soundex code that ignores special characters,Hello@abc,H412
+GenerateSoundex_Vowels_ReturnsPaddedCode,Verify that the expected output for Vowels input should be a padded string,"""Aeiou""","""A000"""
